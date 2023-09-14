@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1171,822" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1171,3886" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -106,7 +106,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This bot will retrieve data from an excel file and create sales report for each file for each person on the excel file and convert that file into pdf." DisplayName="Sales Report Generation Main Sequence" sap:VirtualizedContainerService.HintSize="450,757" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This bot will retrieve data from an excel file and create sales report for each file for each person on the excel file and convert that file into pdf." DisplayName="Sales Report Generation Main Sequence" sap:VirtualizedContainerService.HintSize="704,3821" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_SalesReportFile" />
     </Sequence.Variables>
@@ -117,7 +117,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Excel Process" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="excel">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Excel Process" sap:VirtualizedContainerService.HintSize="642,52" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="excel">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -125,7 +125,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:KillProcess>
-    <ui:LogMessage DisplayName="Log Message - Close Excel Instance" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Closing all excel instance...&quot;]">
+    <ui:LogMessage DisplayName="Log Message - Close Excel Instance" sap:VirtualizedContainerService.HintSize="642,52" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Closing all excel instance...&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -133,7 +133,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ReadCsvFile DataTable="[dt_SalesReportFile]" Delimitator="Comma" DisplayName="Read Sales Report CSV" FilePath="Input Data\Input_Data.csv" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1">
+    <ui:ReadCsvFile DataTable="[dt_SalesReportFile]" Delimitator="Comma" DisplayName="Read Sales Report CSV" FilePath="Input Data\Input_Data.csv" sap:VirtualizedContainerService.HintSize="642,52" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -141,7 +141,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadCsvFile>
-    <ui:LogMessage DisplayName="Log Message - Read Excel File" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Successfully read file.&quot;]">
+    <ui:LogMessage DisplayName="Log Message - Read Excel File" sap:VirtualizedContainerService.HintSize="642,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Successfully read file.&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -149,19 +149,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SalesReportFile]" DisplayName="For Each Row in Sales Report DT" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SalesReportFile]" DisplayName="For Each Row in Sales Report DT" sap:VirtualizedContainerService.HintSize="642,1442" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="634,1367" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="572,1256" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - Employee Being Process " sap:VirtualizedContainerService.HintSize="592,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Processing: &quot; + CurrentRow(0).ToString]">
+            <ui:LogMessage DisplayName="Log Message - Employee Being Process " sap:VirtualizedContainerService.HintSize="530,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Processing: &quot; + CurrentRow(0).ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -169,7 +169,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;WORD_Files\&quot; + CurrentRow(0).ToString + &quot;.docx&quot;]" DisplayName="Copy Master Template Word File" sap:VirtualizedContainerService.HintSize="592,154" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Master_Template.docx">
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;WORD_Files\&quot; + CurrentRow(0).ToString + &quot;.docx&quot;]" DisplayName="Copy Master Template Word File" sap:VirtualizedContainerService.HintSize="530,154" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Master_Template.docx">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,28 +177,21 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CopyFile>
-            <p:WordApplicationScope DisplayName="Word Application Scope - Sales Report File" FilePath="[&quot;WORD_Files\&quot; + CurrentRow(0).ToString + &quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="592,904" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+            <p:WordApplicationScope DisplayName="Word Application Scope - Sales Report File" FilePath="[&quot;WORD_Files\&quot; + CurrentRow(0).ToString + &quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="530,793" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
               <p:WordApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WordDocument">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="558,794" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do - Replace the Name, Division, and Sales in Word File" sap:VirtualizedContainerService.HintSize="496,683" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,683" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <p:WordReplaceText Found="{x:Null}" DisplayName="Replace &lt;Name&gt; in Document" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[CurrentRow(0).ToString]" ReplaceAll="True" Search="&lt;Name&gt;" />
-                      <p:WordReplaceText Found="{x:Null}" DisplayName="Replace &lt;Division&gt; in Document" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[CurrentRow(1).ToString]" ReplaceAll="True" Search="&lt;Division&gt;" />
-                      <p:WordReplaceText Found="{x:Null}" DisplayName="Replace &lt;Sales&gt; in Document" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[CurrentRow(2).ToString]" ReplaceAll="True" Search="&lt;Sales&gt;" />
-                    </Sequence>
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace &lt;Name&gt; in Document" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[CurrentRow(0).ToString]" ReplaceAll="True" Search="&lt;Name&gt;" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace &lt;Division&gt; in Document" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[CurrentRow(1).ToString]" ReplaceAll="True" Search="&lt;Division&gt;" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace &lt;Sales&gt; in Document" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[CurrentRow(2).ToString]" ReplaceAll="True" Search="&lt;Sales&gt;" />
                   </Sequence>
                 </ActivityAction>
               </p:WordApplicationScope.Body>
@@ -214,25 +207,25 @@
       </ui:ForEachRow.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ExcelCult-WordToPDFConverter" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="WindowMessages" ScopeGuid="4c9112f5-bd70-4a52-8843-3c71054e0038" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ExcelCult-WordToPDFConverter" sap:VirtualizedContainerService.HintSize="642,1726" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="WindowMessages" ScopeGuid="4c9112f5-bd70-4a52-8843-3c71054e0038" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="608,1393" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence sap:VirtualizedContainerService.HintSize="608,1395" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1188" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence DisplayName="Do - Converting Word to PDF Phase" sap:VirtualizedContainerService.HintSize="546,1188" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -374,12 +367,12 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message - Done Process" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Process done.&quot;]">
+    <ui:LogMessage DisplayName="Log Message - Done Process" sap:VirtualizedContainerService.HintSize="642,52" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Process done.&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
