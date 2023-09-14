@@ -1,13 +1,11 @@
 {
   "name": "Sales Report Generation Bot",
   "projectId": "4bf5c9fb-be77-4c5c-aedc-a2b85bc303a6",
-  "description": "A bot that will get the data from an excel file and wi",
+  "description": "This bot will retrieve data from an excel file and create sales report for each file for each person on the excel file and convert that file into pdf.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.0-preview]",
-    "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.8.1-preview]",
-    "UiPath.Testing.Activities": "[23.8.0-preview]",
     "UiPath.UIAutomation.Activities": "[23.6.2-preview]"
   },
   "webServices": [],
